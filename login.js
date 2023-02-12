@@ -15,7 +15,7 @@ function checkCredentials() {
 
     for (let i = 0; i < loginInfo.length; i++) {
         if (username === loginInfo[i].username && password === loginInfo[i].password) {
-            window.location.href = "next-page.html";
+            window.location.href = "index.html";
             return;
         }
     }
