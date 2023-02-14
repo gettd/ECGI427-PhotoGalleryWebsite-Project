@@ -1,13 +1,4 @@
-const loginInfo = [
-    {
-        username: "user1",
-        password: "pass1"
-    },
-    {
-        username: "user2",
-        password: "pass2"
-    }
-];
+let loginInfo = [];
 
 function checkCredentials() {
     let username = document.getElementById("username").value;
@@ -19,5 +10,20 @@ function checkCredentials() {
             return;
         }
     }
-    alert("Incorrect username or password. Please try again.");
+    alert("wrong username/password. please try again.");
+}
+
+function register() {
+    let username = document.getElementById("regUsername").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("regPassword").value;
+    let passwordConfirm = document.getElementById("regPasswordConfirm").value;
+
+    if (password !== passwordConfirm) {
+        alert("passwords dont match. please try again.");
+        return;
+    }
+
+    loginInfo.push({username: username, email: email, password: password});
+    alert("Account created! You can now log in.");
 }
